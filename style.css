@@ -1,0 +1,64 @@
+/*Halaman*/
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(192, 217, 234);
+    margin: 0;
+}
+
+/*header*/
+header{
+    background-color: rgb(210, 224, 229);
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/*menu*/
+nav {
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+main{
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+}
+
+h2 {
+    color: black;
+}
+
+/* form */
+input, select, textarea {
+    padding: 8px;
+    margin-top: 8px;
+}
+
+/*button*/
+button {
+    padding: 8px 15px;
+    background-color: rgb(111, 161, 194);
+    color: black;
+}
+
+/*footer*/
+footer{
+    background-color: rgb(135, 184, 214);
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
