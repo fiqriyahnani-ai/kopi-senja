@@ -1,0 +1,476 @@
+
+/* =====================================
+   1. PENGATURAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cokelat: #68452f;
+    --cokelat-gelap: #38261d;
+    --krem: #fff8ed;
+    --krem-tua: #f1e3d0;
+    --putih: #ffffff;
+    --teks: #49382e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--krem);
+    color: var(--teks);
+    line-height: 1.7;
+}
+
+/* =====================================
+   2. NAVBAR
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: var(--putih);
+    box-shadow: 0 2px 12px #00000010;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--cokelat);
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: var(--teks);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #a36c3f;
+}
+
+/* =====================================
+   3. HOME
+===================================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 65px 8%;
+    min-height: 480px;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.subtitle {
+    color: #a36c3f;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.2;
+    color: var(--cokelat-gelap);
+    margin: 15px 0;
+}
+
+.hero-text > p:not(.subtitle) {
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* =====================================
+   4. TOMBOL
+===================================== */
+
+.btn {
+    display: inline-block;
+    background: var(--cokelat);
+    color: var(--putih);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--cokelat-gelap);
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   5. KEUNGGULAN KOPI SENJA
+===================================== */
+
+.features {
+    text-align: center;
+    padding: 55px 8%;
+    background: var(--putih);
+}
+
+.features h2,
+.page-heading h1 {
+    color: var(--cokelat-gelap);
+    font-size: 30px;
+}
+
+.section-desc {
+    margin: 8px 0 30px;
+    color: #77665a;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: var(--krem);
+    padding: 25px 18px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000010;
+}
+
+.feature-card span {
+    font-size: 35px;
+}
+
+.feature-card h3 {
+    margin: 10px 0;
+    color: var(--cokelat);
+}
+
+/* =====================================
+   6. AJAKAN DI HOME
+===================================== */
+
+.cta {
+    text-align: center;
+    padding: 50px 8%;
+    background: var(--cokelat);
+    color: var(--putih);
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.btn-light {
+    background: var(--krem);
+    color: var(--cokelat-gelap);
+}
+
+.btn-light:hover {
+    background: var(--krem-tua);
+}
+
+/* =====================================
+   7. JUDUL HALAMAN
+===================================== */
+
+.page-heading {
+    text-align: center;
+    padding: 45px 8% 25px;
+}
+
+.page-heading p:last-child {
+    margin-top: 8px;
+}
+
+/* =====================================
+   8. BAGIAN KONTEN
+===================================== */
+
+.content-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 8% 60px;
+}
+
+.content-section h2 {
+    color: var(--cokelat);
+    margin-bottom: 12px;
+}
+
+.content-section p {
+    margin-bottom: 18px;
+}
+
+/* =====================================
+   9. HALAMAN TENTANG KAMI
+===================================== */
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.about-image,
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: var(--cokelat);
+    margin-bottom: 12px;
+}
+
+.vision-mission {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.info-box {
+    padding: 28px;
+    border-radius: 14px;
+    background: var(--putih);
+    box-shadow: 0 4px 15px #0000000d;
+}
+
+.info-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info-box h2 {
+    color: var(--cokelat);
+    margin-bottom: 12px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+}
+
+.contact-box {
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 14px;
+    background: var(--krem-tua);
+}
+
+.contact-box h2 {
+    color: var(--cokelat-gelap);
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   10. HALAMAN MENU
+===================================== */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    padding: 25px 8% 60px;
+}
+
+.menu-card {
+    background: var(--putih);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0000000d;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px #00000015;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-info {
+    padding: 18px;
+}
+
+.menu-info h3 {
+    color: var(--cokelat);
+}
+
+.menu-info p {
+    margin: 8px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #a36c3f;
+}
+
+.menu-info .btn {
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =====================================
+   11. FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--cokelat-gelap);
+    color: var(--putih);
+    font-size: 14px;
+}
+
+/* =====================================
+   12. RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 40px;
+    }
+
+    .hero-image img {
+        height: 270px;
+    }
+
+    .feature-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+}
+
+/* =====================================
+   13. RESPONSIVE HP
+===================================== */
+
+@media (max-width: 500px) {
+    .feature-list,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .features h2,
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .content-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .menu-grid {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+/* =====================================
+   14. RESPONSIVE HALAMAN TENTANG
+===================================== */
+
+@media (max-width: 700px) {
+    .about-hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
+    .vision-mission {
+        grid-template-columns: 1fr;
+    }
+}
